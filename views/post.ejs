@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+
+<% posts.forEach(function(element) { %>
+<% if (element.title.toLowerCase() === Id.toLowerCase()){ %>
+  <h1> <strong> <%= element.title %> </strong> </h1>
+  <p> <%= element.text %></p>
+  <% } %>
+<% }); %>
+
+
+
+<%- include("partials/footer"); -%>
