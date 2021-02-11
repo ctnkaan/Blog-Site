@@ -1,0 +1,15 @@
+
+<%- include("partials/header"); -%>
+
+<% results.forEach(function(RowDataPacket){ %>
+    <% if (RowDataPacket.Administrator_idAdministor == 0) { %>
+        <p><strong>User ID: <%=RowDataPacket.User_idUser %> Says...</strong></p>
+    <% } else { %>
+        <p><strong>Admin ID: <%=RowDataPacket.Administrator_idAdministor %> Says...</strong></p>
+    <% } %>
+            <p><%= RowDataPacket.Content %></p>
+            <p><strong>Likes <%= RowDataPacket.Likes %> </strong></p>
+
+<% }) %>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,15 @@
+
+<%- include("partials/header"); -%>
+<% result.forEach(function(RowDataPacket){ %>
+  
+  <h1><strong> <%=RowDataPacket.postName%> </strong></h1>
+  <h4><%=RowDataPacket.postConent%><a></a></h4>
+  <p><strong>Likes: <%= RowDataPacket.postLikes%> </strong></p>
+  <p><strong>Admin ID: <%= RowDataPacket.Administrator_idAdministor%></strong></p>
+
+  <h3><a href="/post">Comments</a></h3>
+
+  <% }) %>
+
+
+<%- include("partials/footer"); -%>
